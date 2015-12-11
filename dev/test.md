@@ -48,7 +48,6 @@ $ TMPDIR___SAVE="$TMPDIR"
 $ TMPDIR=/XXnotfoundXX
 $ export TMPDIR
 $ ./clitest dev/test/ok-1.sh 2>&1 | sed 's/clitest\.[0-9]*$/clitest.NNN/'
-mkdir: /XXnotfoundXX: No such file or directory
 clitest: Error: cannot create temporary dir: /XXnotfoundXX/clitest.NNN
 $ TMPDIR="$TMPDIR___SAVE"
 $

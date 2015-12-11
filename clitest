@@ -738,7 +738,7 @@ then
 fi
 
 # Create temp dir, protected from others
-umask 077 && mkdir "$tt_temp_dir" || tt_error "cannot create temporary dir: $tt_temp_dir"
+umask 077 && mkdir "$tt_temp_dir" 2>/dev/null || tt_error "cannot create temporary dir: $tt_temp_dir"
 
 
 ### Real execution begins here
