@@ -7,7 +7,7 @@ $ tar tzf txt2tags-2.6.tgz | sed -n '$='   # verify number of files
 545
 $ tar xzf txt2tags-2.6.tgz                 # extract
 $ cd txt2tags-2.6
-$ ls -1F                                   # list contents
+$ ls -1Fv                                  # list contents
 COPYING
 ChangeLog
 README

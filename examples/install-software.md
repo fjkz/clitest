@@ -47,7 +47,7 @@ A new `txt2tags-2.6` directory was created. Let's enter into it and
 list the main files, just to be sure.
 
 	$ cd txt2tags-2.6
-	$ ls -1F
+	$ ls -1Fv
 	COPYING
 	ChangeLog
 	README
