@@ -2057,12 +2057,13 @@ $ ./clitest dev/test/stdout-stderr.sh
 #3	echo "stderr" 1>&2
 #4	echo "stdout" > /dev/null
 #5	echo "stdout" 2> /dev/null 1>&2
-#6	cp XXnotfoundXX foo
-#7	cp XXnotfoundXX foo > /dev/null
-#8	cp XXnotfoundXX foo 2>&1
-#9	cp XXnotfoundXX foo 2> /dev/null
-#10	cp XXnotfoundXX foo > /dev/null 2>&1
-OK: 10 of 10 tests passed
+#6	echo_stderr() { echo "stderr" 1>&2; }
+#7	echo_stderr
+#8	echo_stderr > /dev/null
+#9	echo_stderr 2>&1
+#10	echo_stderr 2> /dev/null
+#11	echo_stderr > /dev/null 2>&1
+OK: 11 of 11 tests passed
 $
 ```
 

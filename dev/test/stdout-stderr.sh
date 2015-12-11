@@ -24,22 +24,25 @@ $
 
 ### STDERR
 
+$ echo_stderr() { echo "stderr" 1>&2; }
+$
+
 # Showing STDERR
 
-$ cp XXnotfoundXX foo
-cp: XXnotfoundXX: No such file or directory
-$ cp XXnotfoundXX foo > /dev/null
-cp: XXnotfoundXX: No such file or directory
+$ echo_stderr
+stderr
+$ echo_stderr > /dev/null
+stderr
 $
 
 # Redirecting STDERR to STDOUT
 
-$ cp XXnotfoundXX foo 2>&1
-cp: XXnotfoundXX: No such file or directory
+$ echo_stderr 2>&1
+stderr
 $
 
 # Closing STDERR
 
-$ cp XXnotfoundXX foo 2> /dev/null
-$ cp XXnotfoundXX foo > /dev/null 2>&1
+$ echo_stderr 2> /dev/null
+$ echo_stderr > /dev/null 2>&1
 $
