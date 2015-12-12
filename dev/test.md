@@ -1152,7 +1152,7 @@ $ ./clitest --list-run dev/test/inline-match-egrep.sh
 #12	OK	printf '\t\n'                 
 #13	OK	printf '\t\t\t\n'             
 #14	OK	printf ' \t  \t\t   \n'       
-#15	OK	printf 'may\tfail'            
+#15	FAIL	printf 'may\tfail'            
 #16	FAIL	printf 'may\tfail'            
 #17	OK	printf 'will\tmatch'          
 #18	FAIL	printf 'will\nfail'           
